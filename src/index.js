@@ -14,3 +14,11 @@
  * прибрати завдання зі списку.
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
+import localStorage from './js/localStorageAPI';
+// console.log(localStorage);
+localStorage.initStorage();
+localStorage.removeTask(3);
+// localStorage.addTask({ id: 1, name: 'anna', text: 'task' });
+// localStorage.addTask({ id: 2, name: 'anna', text: 'task' });
+// localStorage.addTask({ id: 3, name: 'anna', text: 'task' });
+// localStorage.addTask({ id: 4, name: 'anna', text: 'task' });
