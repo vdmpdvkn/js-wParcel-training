@@ -15,6 +15,9 @@
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
 import localStorage from './js/localStorageAPI';
+import { submitForm } from './js/submitForm';
+import refs from './js/refs';
+const { formEl } = refs;
 // console.log(localStorage);
 localStorage.initStorage();
 localStorage.removeTask(3);
@@ -22,3 +25,4 @@ localStorage.removeTask(3);
 // localStorage.addTask({ id: 2, name: 'anna', text: 'task' });
 // localStorage.addTask({ id: 3, name: 'anna', text: 'task' });
 // localStorage.addTask({ id: 4, name: 'anna', text: 'task' });
+formEl.addEventListener('submit', submitForm);
