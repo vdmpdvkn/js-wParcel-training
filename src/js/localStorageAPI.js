@@ -12,6 +12,9 @@ function initStorage() {
 }
 
 function addTask(task) {
+  if (!task) {
+    return;
+  }
   const array = JSON.parse(localStorage.getItem(TASK_KEY));
   array.push(task);
   localStorage.setItem(TASK_KEY, JSON.stringify(array));
